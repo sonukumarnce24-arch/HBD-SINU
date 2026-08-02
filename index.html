@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD My Soul ❤️</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        
+        body { 
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); 
+            color: #333; text-align: center; padding: 15px; min-height: 100vh;
+            display: flex; justify-content: center; align-items: center;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            width: 100%; max-width: 480px;
+            padding: 25px; border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .active { display: block; }
+
+        h1 { color: #d63384; font-size: 2.1rem; margin-bottom: 10px; }
+        
+        .message-box {
+            background: #fff8e7; padding: 18px; border-radius: 12px;
+            border-left: 4px solid #ff6b81; text-align: left;
+            line-height: 1.6; font-size: 0.95rem; color: #444;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+            white-space: pre-line;
+        }
+
+        .photo-container {
+            margin: 15px 0; background: #fff; padding: 10px;
+            border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .photo-box, .video-box {
+            width: 100%; height: 260px; border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .caption {
+            font-style: italic; color: #555; font-size: 0.9rem;
+            margin-top: 8px; font-weight: 500;
+        }
+
+        .btn {
+            background: #ff6b81; color: white; border: none;
+            padding: 12px 25px; border-radius: 25px; font-size: 1rem;
+            cursor: pointer; margin-top: 15px; font-weight: bold;
+            transition: 0.3s; width: 100%;
+        }
+
+        .btn:hover { background: #ff4757; transform: scale(1.02); }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- STEP 1: Main Intro -->
+    <div class="card active" id="step1">
+        <h1>HBD My Soul 💖✨</h1>
+        <p style="font-size: 1.1rem; color: #555; margin-top: 15px;">
+            Aap meri life ka sabse khoobsurat hissa ho...
+        </p>
+        <button class="btn" onclick="nextStep(2)">Mera Letter Padho 💌</button>
+    </div>
+
+    <!-- STEP 2: Custom Letter -->
+    <div class="card" id="step2">
+        <h3 style="color: #d63384; margin-bottom: 15px;">Dil Se Aapke Liye 📝</h3>
+        <div class="message-box">
+Suno Sinu,
+
+Aap meri life ka wo hissa ho jo mere har din ko khoobsurat banata hai. Aapki smile mere sabse bure din ko bhi achha bana deti hai.
+
+Hamesha aise hi muskurate rehna. Janamdin bohot bohot mubarak ho! 💖
+        </div>
+        <button class="btn" onclick="nextStep(3)">Humari Yaadein (1/3) 📸</button>
+    </div>
+
+    <!-- STEP 3: Photo 1 -->
+    <div class="card" id="step3">
+        <h3 style="color: #d63384;">Yaad #1 🌸</h3>
+        <div class="photo-container">
+            <img class="photo-box" src="WhatsApp Image 2025-09-05 at 13.15.20.jpeg" alt="Photo 1">
+            <p class="caption">"Yeh humari sabse pyari yaad..."</p>
+        </div>
+        <button class="btn" onclick="nextStep(4)">Agli Photo ➔</button>
+    </div>
+
+    <!-- STEP 4: Photo 2 -->
+    <div class="card" id="step4">
+        <h3 style="color: #d63384;">Yaad #2 ✨</h3>
+        <div class="photo-container">
+            <img class="photo-box" src="sinu.jpeg" alt="Photo 2">
+            <p class="caption">"Aapki yeh wali smile sabse best hai!"</p>
+        </div>
+        <button class="btn" onclick="nextStep(5)">Agli Photo ➔</button>
+    </div>
+
+    <!-- STEP 5: Photo 3 -->
+    <div class="card" id="step5">
+        <h3 style="color: #d63384;">Yaad #3 💕</h3>
+        <div class="photo-container">
+            <img class="photo-box" src="WhatsApp Image 2025-12-07 at 15.52.12 (1).jpeg" alt="Photo 3">
+            <p class="caption">"Aapke sath har moment special hai..."</p>
+        </div>
+        <button class="btn" onclick="nextStep(6)">Aakhri Surprise 🎬</button>
+    </div>
+
+    <!-- STEP 6: Muted Video + Background Song -->
+    <div class="card" id="step6">
+        <h2 style="color: #d63384; margin-bottom: 10px;">For You... 🎬💖</h2>
+        <p style="color: #666; margin-bottom: 10px; font-size: 0.9rem;">
+            <i>"Tujhe sochta hoon main shaam subah..."</i>
+        </p>
+        
+        <div class="photo-container">
+            <!-- Video completely muted hai -->
+            <video id="myVideo" class="video-box" muted playsinline preload="auto">
+                <source src="WhatsApp Video 2025-12-07 at 15.52.37.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <audio id="bgSong" preload="auto">
+            <!-- ⬇️ YAHAN PASTE KAREIN APNA SONG URL ⬇️ -->
+            <source src="https://www.youtube.com/shorts/OKkVjzQVgd4?feature=share" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        function nextStep(stepNumber) {
+            document.querySelectorAll('.card').forEach(card => card.classList.remove('active'));
+            
+            const currentCard = document.getElementById('step' + stepNumber);
+            currentCard.classList.add('active');
+
+            if (stepNumber === 6) {
+                const video = document.getElementById('myVideo');
+                const song = document.getElementById('bgSong');
+
+                // Video ka sound force-mute hai
+                video.muted = true;
+                video.volume = 0;
+
+                // Song 40th sec se shuru hoga
+                song.currentTime = 40; 
+
+                video.play();
+                song.play();
+
+                video.onended = function() {
+                    song.pause();
+                };
+            }
+        }
+    </script>
+</body>
+</html>
