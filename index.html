@@ -92,7 +92,7 @@ Hamesha aise hi muskurate rehna. Janamdin bohot bohot mubarak ho! 💖
     <div class="card" id="step3">
         <h3 style="color: #d63384;">Yaad #1 🌸</h3>
         <div class="photo-container">
-            <img class="photo-box" src="WhatsApp Image 2025-09-05 at 13.15.20.jpeg" alt="Photo 1">
+            <img class="photo-box" src="WhatsApp%20Image%202025-09-05%20at%2013.15.20.jpeg" alt="Photo 1">
             <p class="caption">"Yeh humari sabse pyari yaad..."</p>
         </div>
         <button class="btn" onclick="nextStep(4)">Agli Photo ➔</button>
@@ -112,7 +112,7 @@ Hamesha aise hi muskurate rehna. Janamdin bohot bohot mubarak ho! 💖
     <div class="card" id="step5">
         <h3 style="color: #d63384;">Yaad #3 💕</h3>
         <div class="photo-container">
-            <img class="photo-box" src="WhatsApp Image 2025-12-07 at 15.52.12 (1).jpeg" alt="Photo 3">
+            <img class="photo-box" src="WhatsApp%20Image%202025-12-07%20at%2015.52.12%20(1).jpeg" alt="Photo 3">
             <p class="caption">"Aapke sath har moment special hai..."</p>
         </div>
         <button class="btn" onclick="nextStep(6)">Aakhri Surprise 🎬</button>
@@ -128,7 +128,7 @@ Hamesha aise hi muskurate rehna. Janamdin bohot bohot mubarak ho! 💖
         <div class="photo-container">
             <!-- Video -->
             <video id="myVideo" class="video-box" muted playsinline preload="auto">
-                <source src="WhatsApp Video 2025-12-07 at 15.52.37.mp4" type="video/mp4">
+                <source src="WhatsApp%20Video%202025-12-07%20at%2015.52.37.mp4" type="video/mp4">
             </video>
 
             <!-- Video khatam hone par ye photo aayegi -->
@@ -157,8 +157,8 @@ Hamesha aise hi muskurate rehna. Janamdin bohot bohot mubarak ho! 💖
                 video.muted = true;
 
                 // Play video and background audio
-                video.play();
-                song.play();
+                video.play().catch(e => console.log("Video play error:", e));
+                song.play().catch(e => console.log("Audio play error:", e));
 
                 // Video khtm hote hi video hide hoga aur sinu.jpeg dikhega, song poora chalega!
                 video.onended = function() {
